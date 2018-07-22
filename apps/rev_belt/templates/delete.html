@@ -1,0 +1,29 @@
+<form action="/addreview" method="post">
+    {% csrf_token %}
+    <div class="row">
+        <div class="col">
+            <label for="review">Review:</label>
+            <input type="textarea" rows="2" class="form-control" id="review" name="review">
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <div class="btn-group">
+            <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+                Rating:
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">1</a>
+                <a class="dropdown-item" href="#">2</a>
+                <a class="dropdown-item" href="#">3</a>
+                <a class="dropdown-item" href="#">4</a>
+                <a class="dropdown-item" href="#">5</a>
+            </div>
+            
+        </div>
+        <div class="col">
+            <button class="btn btn-primary" type="submit">Add Review</button>
+        </div>
+    </div>
+</form>
